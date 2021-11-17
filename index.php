@@ -1,7 +1,5 @@
 
 <?php
-//1RTHt2pfE2yo0g9km35
-//$oturum=curl_init("http://bahadironal.xyz/api.php?islem=bilgi&token=1RTHt2pfE2yo0g9km35");
 
 function apisistemi ($hizmet,$token,$ciktituru,$resim=false){
 
@@ -9,7 +7,7 @@ $deger=array("token" => $token);
 
 if ($resim): $deger["resimad"]=$resim; endif;
 
-$oturum=curl_init("http://bahadironal.xyz/api.php?islem=".$hizmet); // &token=4455
+$oturum=curl_init("http://"myhost"/api.php?islem=".$hizmet); // &token=4455
 curl_setopt($oturum,CURLOPT_RETURNTRANSFER, true);
 curl_setopt($oturum,CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($oturum,CURLOPT_POSTFIELDS, json_encode($deger));
